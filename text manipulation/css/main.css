@@ -1,0 +1,74 @@
+body {
+    background: #e0e0e0;
+    padding: 0 5vw;
+    font-family: "poppins";
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.container {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeIn 1s forwards;
+    animation-delay: .5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-weight: normal;
+    font-size: clamp(2rem, 5vw, 7rem);
+    position: relative;
+
+
+ &::before {
+    content: '"';
+    position: absolute;
+    font-size: 30rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    opacity: 0.1;
+    top: -.3rem;
+    left: -.2rem;
+    z-index: -1;
+ }
+} 
+
+button {
+    display: flex;
+    gap: 1rem;
+    border: none;
+    background: none;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover svg {
+        transform: translateX(10px);
+
+    }
+
+    * {
+        flex: 1;
+    }
+
+    span {
+        white-space: nowrap;
+        font-size:  clamp(1.2rem, 1.5vw, 4rem);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    svg {
+        width: 20px;
+        transition: transform .3s;
+    }
+
+}    
+

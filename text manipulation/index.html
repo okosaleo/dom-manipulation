@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>It is absolutely necessary to keep improving</h1>
+        <button>
+            <span>Give me another tip</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+            </svg>
+        </button>
+
+    </div>
+    <script>
+       // console.log(document)
+       let myText = document.querySelector("h1")
+       myText.textContent = "Yoooooo"
+
+       let change = document.querySelector('button')
+       change.addEventListener("click", function changeText() {
+        myText.textContent = "I'm Leo man stop snoozing, deffo a genius"
+       })
+    </script>
+</body>
+</html>
