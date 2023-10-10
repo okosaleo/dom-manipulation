@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="inner">
+            <p class="quote">To become a great designer you need more than talent alone. You need a bit more.</p>
+            <p class="auth">Gary Simon</p>
+        </div>
+        </div>
+        <div class="right">
+            <div class="inner">
+                <div class="mask mask1">
+                    <a href="#" class="cta">
+                    <span>Discover what's extra</span>
+                    <svg version="1.1" id="icons_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}.st2{fill:#ffffff}</style><g id="row2_1_"><g id="_x33__3_"><path class="st2" d="M64 .3C28.8.3.3 28.8.3 64s28.5 63.7 63.7 63.7 63.7-28.5 63.7-63.7S99.2.3 64 .3zm0 121C32.3 121.3 6.7 95.7 6.7 64 6.7 32.3 32.3 6.7 64 6.7c31.7 0 57.3 25.7 57.3 57.3 0 31.7-25.6 57.3-57.3 57.3zm-2-82.8c-2.2 0-3.9 1.8-3.9 3.9l12.2 15.2H41.7c-2.2 0-3.2 2.2-3.2 4.4v4c0 2.2 1.8 3.9 3.9 3.9h28.4L58.1 85.6c0 2.2 1.8 3.9 3.9 3.9h7.1L95.8 64 69.1 38.5H62z" id="right_1_"/></g></g></svg>
+                    </a>
+                </div>
+
+                <div class="mask">
+                    <ul>
+                        <li>Dedication</li>
+                        <li>Consistency</li>
+                        <li>Persistence</li>
+                        <li>Grit</li>
+                        <li class="back">+a little bit of insanity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cta = document.querySelector('.cta')
+        const details = document.querySelector('ul')
+        const back = document.querySelector('.back')
+        let showDetails = false
+
+        function detailPanel() {
+            if (!showDetails) {
+                cta.style.transform = "translateX(110%)"
+                details.style.transform = 'translateX(0)'
+                showDetails = true
+            } else {
+                cta.style.transform = "translateX(0)"
+                details.style.transform = 'translateX(-100%)'
+                showDetails = false
+            }
+        }
+
+        cta.addEventListener('click', () => {
+            detailPanel()
+        })
+        back.addEventListener('click', () => {
+            detailPanel()
+        })
+    </script>
+</body>
+</html>
